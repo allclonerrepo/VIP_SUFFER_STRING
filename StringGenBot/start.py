@@ -7,7 +7,7 @@ from config import OWNER_ID
 def filter(cmd: str):
     return filters.private & filters.incoming & filters.command(cmd)
 
-@Client.on_message(filter("start"))
+@Client.on_message(filter("genstr"))
 async def start(bot: Client, msg: Message):
     me2 = (await bot.get_me()).mention
     await bot.send_message(
@@ -26,8 +26,8 @@ async def start(bot: Client, msg: Message):
                     InlineKeyboardButton(text="▪ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ ▪️", callback_data="generate")
                 ],
                 [
-                    InlineKeyboardButton("🔸 sᴜᴘᴘᴏʀᴛ🔸", url="https://t.me/THE_FUCKING_BOT_2926"),
-                    InlineKeyboardButton("▫️ ᴜᴘᴅᴀᴛᴇs▫️", url="https://t.me/THE_FUKER_BOTS_2926")
+                    InlineKeyboardButton("🔸 sᴜᴘᴘᴏʀᴛ🔸", url="https://t.me/TFW_BOTS_SUPPORT"),
+                    InlineKeyboardButton("▫️ ᴜᴘᴅᴀᴛᴇs▫️", url="https://t.me/TFW_UPDATES")
                 ]
             ]
         ),
